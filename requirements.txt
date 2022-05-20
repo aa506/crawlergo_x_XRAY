@@ -1,0 +1,7 @@
+simplejson
+requests
+subprocess
+threading
+warnings
+json
+UserAgent
