@@ -55,7 +55,7 @@ def request0():
 
 def main(data1):
 	target = data1
-	cmd = ["./crawlergo", "-c", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe","-t", "20","-f","smart","--fuzz-path", "--output-mode", "json", target]
+	cmd = ["./crawlergo", "-c", "/opt/google/chrome/chrome","-t", "20","-f","smart","--fuzz-path", "--output-mode", "json", target]
 	rsp = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 	output, error = rsp.communicate()
 	try:
