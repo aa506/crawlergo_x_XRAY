@@ -6,6 +6,7 @@ import subprocess
 import requests
 import warnings
 import json
+import sys
 from fake_useragent import UserAgent
 
 ua = UserAgent(path="fake_ua.json")
@@ -54,10 +55,10 @@ def main(data1):
 		pass
 	print("[scanning]")
 
-
+file1 = sys.argv[1]
 
 if __name__ == '__main__':
-	file = open("targets.txt")
+	file = open(file1)
 	for text in file.readlines():
 		data1 = text.strip('\n')
 		main(data1)
