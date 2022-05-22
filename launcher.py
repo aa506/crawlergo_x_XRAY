@@ -7,6 +7,7 @@ import threading
 import subprocess
 import requests
 import warnings
+import sys
 warnings.filterwarnings(action='ignore')
 
 urls_queue = queue.Queue()
@@ -78,10 +79,10 @@ def main(data1):
 		return
 	print("[scanning]")
 
-
+file1 = sys.argv[1]
 
 if __name__ == '__main__':
-	file = open("targets.txt")
+	file = open(file1)
 	t = threading.Thread(target=request0)
 	t.start()
 	for text in file.readlines():
