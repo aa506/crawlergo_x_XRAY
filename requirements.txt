@@ -4,4 +4,4 @@ subprocess
 threading
 warnings
 json
-UserAgent
+fake_useragent
